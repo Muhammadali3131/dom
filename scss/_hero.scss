@@ -1,0 +1,131 @@
+.hero {
+  background: black;
+  &-wrapper {
+    padding-top: 155px;
+    padding-bottom: 142px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &-content {
+    width: 50%;
+    p:nth-of-type(1) {
+      font-family: "Poppins", sans-serif;
+      font-size: 64px;
+      font-weight: 700;
+      max-width: 450px;
+      color: white;
+    }
+    p:nth-of-type(2) {
+      font-weight: 500;
+      font-size: 16px;
+      color: #8b8e99;
+      margin-top: 15px;
+      margin-bottom: 47px;
+      text-align: justify;
+    }
+  }
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border-radius: 15px;
+  width: 500px;
+  padding: 7px 15px;
+  &-input {
+    display: flex;
+    align-items: center;
+    .fa-magnifying-glass {
+      font-size: 20px;
+      color: #4c56d9;
+      margin-right: 10px;
+    }
+    input {
+      border: none;
+      outline: none;
+      font-size: 16px;
+      color: #333;
+      width: 100%;
+
+      &::placeholder {
+        color: #aaa;
+      }
+    }
+  }
+  &-btn {
+    margin-left: auto;
+    background: #3858d6;
+    color: #fff;
+    border: none;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 12px;
+    padding: 10px 20px;
+
+    &:hover {
+      background: #3a44b8;
+    }
+  }
+}
+@media (max-width: 990px) {
+  .hero {
+    &-wrapper {
+      flex-direction: column-reverse;
+      text-align: center;
+      gap: 40px;
+    }
+    &-content {
+      width: 100%;
+
+      p:nth-of-type(1) {
+        font-size: 48px;
+        max-width: 100%;
+      }
+      p:nth-of-type(2) {
+        font-size: 15px;
+        margin-bottom: 35px;
+      }
+    }
+  }
+
+  .search-bar {
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero {
+    &-content {
+      p:nth-of-type(1) {
+        font-size: 32px;
+      }
+      p:nth-of-type(2) {
+        font-size: 14px;
+        margin-bottom: 25px;
+      }
+    }
+  }
+
+  .search-bar {
+    flex-direction: column;
+    align-items: start;
+    padding: 10px;
+
+    &-input {
+      margin-bottom: 10px;
+
+      input {
+        font-size: 14px;
+      }
+    }
+
+    &-btn {
+      width: 100%;
+      font-size: 16px;
+      padding: 10px;
+    }
+  }
+}
